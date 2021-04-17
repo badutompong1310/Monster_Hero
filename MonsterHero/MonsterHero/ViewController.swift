@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func energyButton(_ sender: UIButton) {
-        
+            
     }
     
     @IBAction func nextMonster(_ sender: UIButton) {
