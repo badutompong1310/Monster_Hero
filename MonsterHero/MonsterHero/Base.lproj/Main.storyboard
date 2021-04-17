@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s73-kc-lYO">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,60 +12,69 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MonsterHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-7k-zYV">
-                                <rect key="frame" x="82" y="108" width="250" height="250"/>
+                                <rect key="frame" x="70" y="108" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="bQd-C9-nIX"/>
                                     <constraint firstAttribute="width" constant="250" id="xOX-EL-H6W"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monster_name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuh-f4-CsV">
-                                <rect key="frame" x="15" y="390" width="384" height="29"/>
+                                <rect key="frame" x="15" y="390" width="360" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monster_desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PX-Li-5G1">
-                                <rect key="frame" x="15" y="429" width="384" height="29"/>
+                                <rect key="frame" x="15" y="429" width="360" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-ik-Enx">
-                                <rect key="frame" x="15" y="498" width="384" height="4"/>
+                                <rect key="frame" x="15" y="497.66666666666669" width="360" height="4"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZu-Uo-owl">
-                                <rect key="frame" x="157" y="548" width="100" height="44"/>
+                                <rect key="frame" x="145" y="547.66666666666663" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.37793937329999999" green="0.48482275009999998" blue="0.58433216809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="BmB-Dr-4cL"/>
                                     <constraint firstAttribute="width" constant="100" id="ijY-jF-PmZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Preview">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="energyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNm-Bj-cpl"/>
+                                    <action selector="editTheMonster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNm-Bj-cpl"/>
+                                    <segue destination="LMd-46-sOw" kind="presentation" identifier="editTheMonster" id="M0G-eA-7wE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWS-wB-oyJ">
-                                <rect key="frame" x="282" y="555" width="44" height="30"/>
+                                <rect key="frame" x="265" y="554.66666666666663" width="44" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="zP4-Le-Ldo"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <state key="normal" title="➡️"/>
                                 <connections>
                                     <action selector="nextMonster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDy-om-Lv4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTH-1G-21A">
-                                <rect key="frame" x="88" y="555" width="44" height="30"/>
+                                <rect key="frame" x="81" y="554.66666666666663" width="44" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="mt2-O5-7X4"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <state key="normal" title="⬅️"/>
                                 <connections>
                                     <action selector="prevMonster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jtk-IF-ua1"/>
@@ -84,10 +92,10 @@
                             <constraint firstItem="WYD-ik-Enx" firstAttribute="trailing" secondItem="4PX-Li-5G1" secondAttribute="trailing" id="EhQ-Cy-1po"/>
                             <constraint firstItem="4PX-Li-5G1" firstAttribute="top" secondItem="Uuh-f4-CsV" secondAttribute="bottom" constant="10" id="IPg-nS-prj"/>
                             <constraint firstItem="Uuh-f4-CsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="N4f-jQ-9Y1"/>
-                            <constraint firstItem="LWS-wB-oyJ" firstAttribute="leading" secondItem="NZu-Uo-owl" secondAttribute="trailing" constant="25" id="Nqz-g9-OGh"/>
+                            <constraint firstItem="LWS-wB-oyJ" firstAttribute="leading" secondItem="NZu-Uo-owl" secondAttribute="trailing" constant="20" id="Nqz-g9-OGh"/>
                             <constraint firstItem="LWS-wB-oyJ" firstAttribute="height" secondItem="NZu-Uo-owl" secondAttribute="height" multiplier="0.681818" id="O5O-B8-IFc"/>
                             <constraint firstItem="4PX-Li-5G1" firstAttribute="trailing" secondItem="Uuh-f4-CsV" secondAttribute="trailing" id="Q8f-jN-TIZ"/>
-                            <constraint firstItem="NZu-Uo-owl" firstAttribute="leading" secondItem="GTH-1G-21A" secondAttribute="trailing" constant="25" id="RqZ-2X-ojW"/>
+                            <constraint firstItem="NZu-Uo-owl" firstAttribute="leading" secondItem="GTH-1G-21A" secondAttribute="trailing" constant="20" id="RqZ-2X-ojW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uuh-f4-CsV" secondAttribute="trailing" constant="15" id="W0d-K1-nUb"/>
                             <constraint firstItem="WYD-ik-Enx" firstAttribute="top" secondItem="4PX-Li-5G1" secondAttribute="bottom" constant="40" id="cU1-VO-2Lt"/>
                             <constraint firstItem="GTH-1G-21A" firstAttribute="centerY" secondItem="NZu-Uo-owl" secondAttribute="centerY" id="mxK-b6-Euy"/>
@@ -103,11 +111,137 @@
                         <outlet property="monsterEnergy" destination="WYD-ik-Enx" id="jcq-y8-THH"/>
                         <outlet property="monsterImage" destination="AEd-7k-zYV" id="C65-vi-Or2"/>
                         <outlet property="monsterName" destination="Uuh-f4-CsV" id="RRK-bd-hYq"/>
+                        <outlet property="nextButton" destination="LWS-wB-oyJ" id="dws-jU-0W4"/>
+                        <outlet property="previousButton" destination="GTH-1G-21A" id="Sss-Fu-Qrh"/>
+                        <segue destination="n5F-T3-97M" kind="unwind" identifier="backToMain" unwindAction="performUnwindSegueOperation:" id="UiM-ZR-XpN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="n5F-T3-97M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="u4g-XW-d2g">
+            <objects>
+                <viewController id="LMd-46-sOw" customClass="SecondViewController" customModule="MonsterHero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gMC-TG-xnf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tue-hn-hEk">
+                                <rect key="frame" x="70" y="60" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="AOv-yU-10E"/>
+                                    <constraint firstAttribute="height" constant="250" id="W57-8V-1d0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gb-ft-IYY">
+                                <rect key="frame" x="322" y="11" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AmI-G9-dG5"/>
+                                    <constraint firstAttribute="width" constant="37" id="c2R-8o-2yn"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveChanges:" destination="LMd-46-sOw" eventType="touchUpInside" id="xsm-cr-9hH"/>
+                                    <segue destination="NEY-Dj-0Y8" kind="unwind" unwindAction="performUnwindSegueOperation:" id="fdi-Fq-5KZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-fm-nne">
+                                <rect key="frame" x="31" y="11" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LXN-1u-Wiu"/>
+                                    <constraint firstAttribute="width" constant="48" id="zey-KK-xje"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelChanges:" destination="LMd-46-sOw" eventType="touchUpInside" id="HMS-BM-9IP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Monster Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcZ-aT-Kt3">
+                                <rect key="frame" x="108" y="318" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Monster Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ3-Cl-EVs">
+                                <rect key="frame" x="70" y="410.33333333333331" width="250" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Monster Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3T-v4-MAU">
+                                <rect key="frame" x="70" y="499.33333333333331" width="250" height="20.999999999999943"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Monster Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-Xr-cWr">
+                                <rect key="frame" x="87" y="347" width="217" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your new monster name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXN-th-w50">
+                                <rect key="frame" x="70" y="439.33333333333331" width="250" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YOh-Bn-xvd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" borderStyle="line" placeholder="Enter your new monster description" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LD0-Rq-YDn">
+                                <rect key="frame" x="70" y="528.33333333333337" width="250" height="122.66666666666663"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="faj-Gr-0m2"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hQ3-Cl-EVs" firstAttribute="top" secondItem="Q97-Xr-cWr" secondAttribute="bottom" constant="43" id="09r-L3-rzM"/>
+                            <constraint firstItem="C3T-v4-MAU" firstAttribute="top" secondItem="jXN-th-w50" secondAttribute="bottom" constant="20" id="3kP-dS-67G"/>
+                            <constraint firstItem="IcZ-aT-Kt3" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="108" id="4dv-FO-MiP"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="Q97-Xr-cWr" secondAttribute="trailing" constant="86" id="4wq-wc-HbW"/>
+                            <constraint firstItem="Tue-hn-hEk" firstAttribute="top" secondItem="faj-Gr-0m2" secondAttribute="top" constant="60" id="69X-YD-C38"/>
+                            <constraint firstItem="j9U-fm-nne" firstAttribute="top" secondItem="faj-Gr-0m2" secondAttribute="top" constant="11" id="9iO-dW-RqT"/>
+                            <constraint firstItem="Tue-hn-hEk" firstAttribute="centerX" secondItem="gMC-TG-xnf" secondAttribute="centerX" id="A1l-tz-t70"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="hQ3-Cl-EVs" secondAttribute="trailing" constant="70" id="GgH-fA-woE"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="bottom" secondItem="LD0-Rq-YDn" secondAttribute="bottom" constant="105" id="IJ3-mi-9np"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="jXN-th-w50" secondAttribute="trailing" constant="70" id="LSe-pc-tLc"/>
+                            <constraint firstItem="jXN-th-w50" firstAttribute="top" secondItem="hQ3-Cl-EVs" secondAttribute="bottom" constant="8" symbolic="YES" id="Qte-Rb-aLT"/>
+                            <constraint firstItem="hQ3-Cl-EVs" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="70" id="SBB-rn-Cq2"/>
+                            <constraint firstItem="j9U-fm-nne" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="31" id="ZAl-8Z-2e7"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="C3T-v4-MAU" secondAttribute="trailing" constant="70" id="gfU-uT-Ck2"/>
+                            <constraint firstItem="Q97-Xr-cWr" firstAttribute="top" secondItem="IcZ-aT-Kt3" secondAttribute="bottom" constant="8" symbolic="YES" id="irH-1R-k42"/>
+                            <constraint firstItem="Q97-Xr-cWr" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="87" id="je2-PX-KgP"/>
+                            <constraint firstItem="2gb-ft-IYY" firstAttribute="top" secondItem="faj-Gr-0m2" secondAttribute="top" constant="11" id="lm3-rm-Bt0"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="IcZ-aT-Kt3" secondAttribute="trailing" constant="107" id="m1I-U5-31y"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="LD0-Rq-YDn" secondAttribute="trailing" constant="70" id="maG-Fy-ACb"/>
+                            <constraint firstItem="IcZ-aT-Kt3" firstAttribute="top" secondItem="Tue-hn-hEk" secondAttribute="bottom" constant="8" symbolic="YES" id="pqu-V2-bSe"/>
+                            <constraint firstItem="LD0-Rq-YDn" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="70" id="rIK-DV-xXf"/>
+                            <constraint firstItem="faj-Gr-0m2" firstAttribute="trailing" secondItem="2gb-ft-IYY" secondAttribute="trailing" constant="31" id="sYN-HN-5cc"/>
+                            <constraint firstItem="C3T-v4-MAU" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="70" id="sai-GJ-M36"/>
+                            <constraint firstItem="LD0-Rq-YDn" firstAttribute="top" secondItem="C3T-v4-MAU" secondAttribute="bottom" constant="8" symbolic="YES" id="tHx-D7-XFu"/>
+                            <constraint firstItem="jXN-th-w50" firstAttribute="leading" secondItem="faj-Gr-0m2" secondAttribute="leading" constant="70" id="wGm-cw-knY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="alH-W8-b6F"/>
+                    <connections>
+                        <outlet property="monsterDescription" destination="Q97-Xr-cWr" id="OEA-mh-2IZ"/>
+                        <outlet property="monsterImage" destination="Tue-hn-hEk" id="wgQ-lW-bjA"/>
+                        <outlet property="monsterName" destination="IcZ-aT-Kt3" id="uJr-UE-vve"/>
+                        <outlet property="newMonsterDescription" destination="LD0-Rq-YDn" id="rga-mU-DAd"/>
+                        <outlet property="newMonsterNameField" destination="jXN-th-w50" id="Cdf-U3-xRH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIz-hP-6qt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NEY-Dj-0Y8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1870.7692307692307" y="113.74407582938387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zh5-iR-eiu">
@@ -115,7 +249,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s73-kc-lYO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Ruk-kR-oCl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -128,9 +262,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

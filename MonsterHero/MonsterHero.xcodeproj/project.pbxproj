@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6F0DDB262B359300AB6D86 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F0DDA262B359300AB6D86 /* SecondViewController.swift */; };
 		E6BE90FF262B20CB00FBE7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BE90FE262B20CB00FBE7FC /* AppDelegate.swift */; };
 		E6BE9101262B20CB00FBE7FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BE9100262B20CB00FBE7FC /* SceneDelegate.swift */; };
 		E6BE9103262B20CB00FBE7FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BE9102262B20CB00FBE7FC /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E6F0DDA262B359300AB6D86 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E6BE90FB262B20CB00FBE7FC /* MonsterHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BE90FE262B20CB00FBE7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6BE9100262B20CB00FBE7FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				E6BE9107262B20CB00FBE7FC /* MonsterHero.xcdatamodeld */,
 				E6BE9116262B256000FBE7FC /* Monster.swift */,
 				E6BE9119262B258F00FBE7FC /* MonsterType.swift */,
+				4E6F0DDA262B359300AB6D86 /* SecondViewController.swift */,
 			);
 			path = MonsterHero;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				E6BE9103262B20CB00FBE7FC /* ViewController.swift in Sources */,
 				E6BE911A262B258F00FBE7FC /* MonsterType.swift in Sources */,
 				E6BE90FF262B20CB00FBE7FC /* AppDelegate.swift in Sources */,
+				4E6F0DDB262B359300AB6D86 /* SecondViewController.swift in Sources */,
 				E6BE9109262B20CB00FBE7FC /* MonsterHero.xcdatamodeld in Sources */,
 				E6BE9101262B20CB00FBE7FC /* SceneDelegate.swift in Sources */,
 			);

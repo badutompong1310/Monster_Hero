@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Monster {
+struct Monster {
     
     var type: MonsterType?
     var name: String?
