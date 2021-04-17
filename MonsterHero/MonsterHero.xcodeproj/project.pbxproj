@@ -14,6 +14,8 @@
 		E6BE9109262B20CB00FBE7FC /* MonsterHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6BE9107262B20CB00FBE7FC /* MonsterHero.xcdatamodeld */; };
 		E6BE910B262B20CD00FBE7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6BE910A262B20CD00FBE7FC /* Assets.xcassets */; };
 		E6BE910E262B20CD00FBE7FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6BE910C262B20CD00FBE7FC /* LaunchScreen.storyboard */; };
+		E6BE9117262B256000FBE7FC /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BE9116262B256000FBE7FC /* Monster.swift */; };
+		E6BE911A262B258F00FBE7FC /* MonsterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BE9119262B258F00FBE7FC /* MonsterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E6BE910A262B20CD00FBE7FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6BE910D262B20CD00FBE7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6BE910F262B20CD00FBE7FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6BE9116262B256000FBE7FC /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		E6BE9119262B258F00FBE7FC /* MonsterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				E6BE910C262B20CD00FBE7FC /* LaunchScreen.storyboard */,
 				E6BE910F262B20CD00FBE7FC /* Info.plist */,
 				E6BE9107262B20CB00FBE7FC /* MonsterHero.xcdatamodeld */,
+				E6BE9116262B256000FBE7FC /* Monster.swift */,
+				E6BE9119262B258F00FBE7FC /* MonsterType.swift */,
 			);
 			path = MonsterHero;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BE9117262B256000FBE7FC /* Monster.swift in Sources */,
 				E6BE9103262B20CB00FBE7FC /* ViewController.swift in Sources */,
+				E6BE911A262B258F00FBE7FC /* MonsterType.swift in Sources */,
 				E6BE90FF262B20CB00FBE7FC /* AppDelegate.swift in Sources */,
 				E6BE9109262B20CB00FBE7FC /* MonsterHero.xcdatamodeld in Sources */,
 				E6BE9101262B20CB00FBE7FC /* SceneDelegate.swift in Sources */,
