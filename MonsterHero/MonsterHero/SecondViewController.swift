@@ -25,6 +25,8 @@ class SecondViewController: UIViewController {
         monsterName.text = currentMonsterName
         monsterDescription.text = currentMonsterDescription
         monsterImage.image = currentMonsterImage
+        newMonsterNameField.delegate = self
+        newMonsterDescription.delegate = self
     }
    
     @IBAction func cancelChanges(_ sender: UIButton) {
@@ -57,5 +59,12 @@ class SecondViewController: UIViewController {
         
         lastVC.currentIndexMonster = currentIndexMonster
         
+    }
+}
+
+extension SecondViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
 }
