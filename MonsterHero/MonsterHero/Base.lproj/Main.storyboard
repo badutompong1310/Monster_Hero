@@ -80,6 +80,12 @@
                                     <action selector="prevMonster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jtk-IF-ua1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of monsters:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvW-x0-Z3N">
+                                <rect key="frame" x="15" y="611.66666666666663" width="360" height="28.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,8 +94,10 @@
                             <constraint firstItem="AEd-7k-zYV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="39B-uw-XSL"/>
                             <constraint firstItem="Uuh-f4-CsV" firstAttribute="top" secondItem="AEd-7k-zYV" secondAttribute="bottom" constant="32" id="7Ab-rS-z49"/>
                             <constraint firstItem="NZu-Uo-owl" firstAttribute="top" secondItem="WYD-ik-Enx" secondAttribute="bottom" constant="46" id="8lD-LO-8zf"/>
+                            <constraint firstItem="QvW-x0-Z3N" firstAttribute="leading" secondItem="4PX-Li-5G1" secondAttribute="leading" id="Cfv-my-lx5"/>
                             <constraint firstItem="LWS-wB-oyJ" firstAttribute="centerY" secondItem="NZu-Uo-owl" secondAttribute="centerY" id="Do6-lf-nBZ"/>
                             <constraint firstItem="WYD-ik-Enx" firstAttribute="trailing" secondItem="4PX-Li-5G1" secondAttribute="trailing" id="EhQ-Cy-1po"/>
+                            <constraint firstItem="QvW-x0-Z3N" firstAttribute="trailing" secondItem="4PX-Li-5G1" secondAttribute="trailing" id="Ha4-Zi-g9L"/>
                             <constraint firstItem="4PX-Li-5G1" firstAttribute="top" secondItem="Uuh-f4-CsV" secondAttribute="bottom" constant="10" id="IPg-nS-prj"/>
                             <constraint firstItem="Uuh-f4-CsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="N4f-jQ-9Y1"/>
                             <constraint firstItem="LWS-wB-oyJ" firstAttribute="leading" secondItem="NZu-Uo-owl" secondAttribute="trailing" constant="20" id="Nqz-g9-OGh"/>
@@ -97,6 +105,7 @@
                             <constraint firstItem="4PX-Li-5G1" firstAttribute="trailing" secondItem="Uuh-f4-CsV" secondAttribute="trailing" id="Q8f-jN-TIZ"/>
                             <constraint firstItem="NZu-Uo-owl" firstAttribute="leading" secondItem="GTH-1G-21A" secondAttribute="trailing" constant="20" id="RqZ-2X-ojW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uuh-f4-CsV" secondAttribute="trailing" constant="15" id="W0d-K1-nUb"/>
+                            <constraint firstItem="QvW-x0-Z3N" firstAttribute="top" secondItem="NZu-Uo-owl" secondAttribute="bottom" constant="20" id="WDe-OD-JeO"/>
                             <constraint firstItem="WYD-ik-Enx" firstAttribute="top" secondItem="4PX-Li-5G1" secondAttribute="bottom" constant="40" id="cU1-VO-2Lt"/>
                             <constraint firstItem="GTH-1G-21A" firstAttribute="centerY" secondItem="NZu-Uo-owl" secondAttribute="centerY" id="mxK-b6-Euy"/>
                             <constraint firstItem="NZu-Uo-owl" firstAttribute="centerX" secondItem="WYD-ik-Enx" secondAttribute="centerX" id="p52-oI-PZ3"/>
@@ -110,6 +119,7 @@
                         <outlet property="monsterDesc" destination="4PX-Li-5G1" id="kfe-Ac-ELA"/>
                         <outlet property="monsterEnergy" destination="WYD-ik-Enx" id="jcq-y8-THH"/>
                         <outlet property="monsterImage" destination="AEd-7k-zYV" id="C65-vi-Or2"/>
+                        <outlet property="monsterLists" destination="QvW-x0-Z3N" id="3bw-AZ-MC0"/>
                         <outlet property="monsterName" destination="Uuh-f4-CsV" id="RRK-bd-hYq"/>
                         <outlet property="nextButton" destination="LWS-wB-oyJ" id="dws-jU-0W4"/>
                         <outlet property="previousButton" destination="GTH-1G-21A" id="Sss-Fu-Qrh"/>
@@ -119,7 +129,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="n5F-T3-97M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
+            <point key="canvasLocation" x="1047.6923076923076" y="113.74407582938387"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="u4g-XW-d2g">

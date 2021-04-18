@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var monsterLists: UILabel!
     @IBOutlet weak var monsterImage: UIImageView!
     @IBOutlet weak var monsterName: UILabel!
     @IBOutlet weak var monsterDesc: UILabel!
@@ -22,14 +23,13 @@ class ViewController: UIViewController {
     var newMonsterName: String?
     var newMonsterDescription: String?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateMonster()
         monsterPreview(index: 0)
         previousButton.isEnabled = false
         previousButton.alpha = 0.5
+        displayMonsterList()
     }
     
     func generateMonster() {
@@ -37,6 +37,14 @@ class ViewController: UIViewController {
         monsters.append(Monster(monster_type: .purple, monster_name: "Purplexis", monster_desc: "Purplexis is lovely monster, his ability to turn mad into love", monster_energy: 0.3))
         monsters.append(Monster(monster_type: .red, monster_name: "RedEyex", monster_desc: "RedEyex is a madness, he will consume a love energy", monster_energy: 0.8))
         monsters.append(Monster(monster_type: .yellow, monster_name: "Yellowyx", monster_desc: "Yellowyx is neutral monster, he will turn noise to peace", monster_energy: 0.6))
+    }
+    
+    func displayMonsterList() {
+        var monsterNameList = ""
+        for monster in monsters {
+            monsterNameList.append("\(monster.name!),")
+        }
+        monsterLists.text = "List of Monsters: \(monsterNameList)"
     }
     
     func monsterPreview(index: Int) {
