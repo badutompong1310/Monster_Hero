@@ -118,7 +118,7 @@
                     <connections>
                         <outlet property="monsterDesc" destination="4PX-Li-5G1" id="kfe-Ac-ELA"/>
                         <outlet property="monsterEnergy" destination="WYD-ik-Enx" id="jcq-y8-THH"/>
-                        <outlet property="monsterImage" destination="AEd-7k-zYV" id="C65-vi-Or2"/>
+                        <outlet property="monsterImage" destination="AEd-7k-zYV" id="1jg-bP-DrV"/>
                         <outlet property="monsterLists" destination="QvW-x0-Z3N" id="3bw-AZ-MC0"/>
                         <outlet property="monsterName" destination="Uuh-f4-CsV" id="RRK-bd-hYq"/>
                         <outlet property="nextButton" destination="LWS-wB-oyJ" id="dws-jU-0W4"/>

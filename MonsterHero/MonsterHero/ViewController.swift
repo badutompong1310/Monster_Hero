@@ -48,7 +48,6 @@ class ViewController: UIViewController {
     }
     
     func monsterPreview(index: Int) {
-        
         switch monsters[index].type {
         case .green:
             monsterImage.image = #imageLiteral(resourceName: "green")
@@ -84,11 +83,11 @@ class ViewController: UIViewController {
     
     @IBAction func nextMonster(_ sender: UIButton) {
 
-        if currentIndexMonster < monsters.count-1    {
+        if currentIndexMonster < monsters.count {
             currentIndexMonster += 1
             previousButton.isEnabled = true
             previousButton.alpha = 1
-            if currentIndexMonster == monsters.count-1 {
+            if currentIndexMonster == monsters.count {
                 nextButton.isEnabled = false
                 nextButton.alpha = 0.5
             }

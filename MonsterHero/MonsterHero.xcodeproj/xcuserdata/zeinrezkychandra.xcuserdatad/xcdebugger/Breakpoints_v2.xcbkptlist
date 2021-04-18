@@ -3,4 +3,31 @@
    uuid = "BAB29C2B-BB81-48ED-B29A-5423F088A53D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA29CB5E-BEC1-41A1-9BAC-6EE931B39532"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "monster_preview_breakpoint"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "MonsterHero/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "monsterPreview(index:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po monsters[index].type">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
