@@ -123,11 +123,9 @@
                         <outlet property="monsterName" destination="Uuh-f4-CsV" id="RRK-bd-hYq"/>
                         <outlet property="nextButton" destination="LWS-wB-oyJ" id="dws-jU-0W4"/>
                         <outlet property="previousButton" destination="GTH-1G-21A" id="Sss-Fu-Qrh"/>
-                        <segue destination="n5F-T3-97M" kind="unwind" identifier="backToMain" unwindAction="performUnwindSegueOperation:" id="UiM-ZR-XpN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="n5F-T3-97M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.6923076923076" y="113.74407582938387"/>
         </scene>
