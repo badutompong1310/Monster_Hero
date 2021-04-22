@@ -5,7 +5,7 @@
 //  Created by zein rezky chandra on 17/04/21.
 //
 
-import Foundation
+import UIKit
 
 /// Modified by: Zein
 /// Enumeration
@@ -21,4 +21,15 @@ enum MonsterType {
     case purple
     case red
     case yellow
+}
+
+extension MonsterType {
+    func getImage() -> UIImage {
+        switch self {
+        case .green: return #imageLiteral(resourceName: "green")
+        case .purple: return #imageLiteral(resourceName: "purple")
+        case .yellow: return #imageLiteral(resourceName: "yellow")
+        case .red: return #imageLiteral(resourceName: "red")
+        }
+    }
 }

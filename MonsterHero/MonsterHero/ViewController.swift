@@ -27,11 +27,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         generateMonster()
         monsterPreview(index: 0)
-        previousButton.isEnabled = false
-        previousButton.alpha = 0.5
+        previousButton.set(isEnabled: false)
         displayMonsterList()
     }
     
+    //MARK: - Setting up model
     func generateMonster() {
         monsters.append(Monster(monster_type: .green, monster_name: "Greenyx", monster_desc: "Greenyx is one of the savior monster, he will became your savior and loyal with his master", monster_energy: 0.5))
         monsters.append(Monster(monster_type: .purple, monster_name: "Purplexis", monster_desc: "Purplexis is lovely monster, his ability to turn mad into love", monster_energy: 0.3))
@@ -39,27 +39,18 @@ class ViewController: UIViewController {
         monsters.append(Monster(monster_type: .yellow, monster_name: "Yellowyx", monster_desc: "Yellowyx is neutral monster, he will turn noise to peace", monster_energy: 0.6))
     }
     
+    //MARK: - Setting up the view
     func displayMonsterList() {
         var monsterNameList = ""
         for monster in monsters {
-            monsterNameList.append("\(monster.name!),")
+            guard let name = monster.name else { return }
+            monsterNameList.append("\(name), ")
         }
-        monsterLists.text = "List of Monsters: \(monsterNameList)"
+        monsterLists.text = "List of Monsters: \(monsterNameList.prefix(monsterNameList.count - 2))"
     }
     
     func monsterPreview(index: Int) {
-        switch monsters[index].type {
-        case .green:
-            monsterImage.image = #imageLiteral(resourceName: "green")
-        case .purple:
-            monsterImage.image = #imageLiteral(resourceName: "purple")
-        case .yellow:
-            monsterImage.image = #imageLiteral(resourceName: "yellow")
-        case .red:
-            monsterImage.image = #imageLiteral(resourceName: "red")
-        default:
-            monsterImage.image = #imageLiteral(resourceName: "red")
-        }
+        monsterImage.image = monsters[index].type?.getImage()
         monsterName.text = monsters[index].name
         monsterDesc.text = monsters[index].description
         DispatchQueue.main.async {
@@ -69,6 +60,7 @@ class ViewController: UIViewController {
         
     }
 
+    //MARK: - Handle the segue
     @IBAction func editTheMonster(_ sender: UIButton) {
         performSegue(withIdentifier: "editTheMonster", sender: self)
     }
@@ -81,15 +73,14 @@ class ViewController: UIViewController {
         newVC.currentIndexMonster = currentIndexMonster
     }
     
+    //MARK: - Handle the Action
     @IBAction func nextMonster(_ sender: UIButton) {
 
-        if currentIndexMonster < monsters.count {
+        if currentIndexMonster < monsters.count - 1 {
             currentIndexMonster += 1
-            previousButton.isEnabled = true
-            previousButton.alpha = 1
-            if currentIndexMonster == monsters.count {
-                nextButton.isEnabled = false
-                nextButton.alpha = 0.5
+            previousButton.set(isEnabled: true)
+            if currentIndexMonster == monsters.count - 1 {
+                nextButton.set(isEnabled: false)
             }
         }
 
@@ -100,11 +91,9 @@ class ViewController: UIViewController {
 
         if currentIndexMonster > 0 {
             currentIndexMonster -= 1
-            nextButton.isEnabled = true
-            nextButton.alpha = 1
+            nextButton.set(isEnabled: true)
             if currentIndexMonster == 0 {
-                previousButton.isEnabled = false
-                previousButton.alpha = 0.5
+                previousButton.set(isEnabled: false)
             }
         }
         
@@ -112,6 +101,7 @@ class ViewController: UIViewController {
 
     }
     
+    //MARK: - Handle the UnwindSegue
     @IBAction func performUnwindSegueOperation(_ sender: UIStoryboardSegue) {
         guard let senderVC = sender.source as? SecondViewController else { return }
         if senderVC.newMonsterNameField.text == "" || senderVC.newMonsterDescription.text == "" {
@@ -131,6 +121,14 @@ class ViewController: UIViewController {
     func reloadData() {
         monsters[currentIndexMonster].name = newMonsterName
         monsters[currentIndexMonster].description = newMonsterDescription
+    }
+}
+
+//MARK: - Button extension
+extension UIButton {
+    func set(isEnabled: Bool) {
+        self.isEnabled = isEnabled
+        self.alpha = isEnabled ? 1.0 : 0.5
     }
 }
 
